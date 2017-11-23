@@ -1,0 +1,23 @@
+group 'io.norbson'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.12'
+    compile 'com.rabbitmq:amqp-client:5.0.0'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}
